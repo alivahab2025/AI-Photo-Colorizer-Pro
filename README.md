@@ -1,78 +1,47 @@
-\# 🎨 AI Photo Colorizer \& Restorer Pro Studio
+# 🎨 AI Photo Colorizer & Restorer Pro Studio
 
+A modern, high-performance desktop application built with Python, CustomTkinter, PyTorch, FastAI, and OpenCV to colorize and restore black-and-white photos using offline AI models.
 
+---
 
-A professional desktop application built with Python, CustomTkinter, PyTorch, FastAI, and OpenCV to colorize and restore black-and-white photos using offline AI models.
+## 🌟 Key Features
+- **Multi-Model Support:** Includes Zhang (Caffe), DeOldify Artistic, and DeOldify Stable models.
+- **Modern Dark UI:** Responsive interface with CustomTkinter and real-time live preview.
+- **Hardware Acceleration:** Auto-detects CUDA GPU or falls back smoothly to CPU.
+- **Post-Processing Enhancements:** Real-time controls for Saturation, Contrast, Brightness, Sharpness, and Gamma.
 
+---
 
+## 🚀 Quick Start (Windows)
 
-\---
+1. **Clone or Download** this repository.
+2. **Download Model Weights:** Download the 5 required model files from our [**Latest Release (v1.0.0)**](https://github.com/alivahab2025/AI-Photo-Colorizer-Pro/releases/tag/v1.0.0) and place them inside the `models/` directory.
+3. **Run the App:** Double-click **`run_app.bat`**. It will automatically set up the virtual environment, install dependencies, and launch the application!
 
+---
 
+## 📥 Required AI Model Weights
 
-\## 🚀 Quick Start (Windows)
-
-
-
-1\. Clone or download this repository.
-
-2\. Download the required model weights (listed below) and place them inside the `models/` directory.
-
-3\. Double-click \*\*`run\_app.bat`\*\*. It will automatically set up the Python environment, install dependencies, and launch the application!
-
-
-
-\---
-
-
-
-\## 📥 Required AI Model Weights (Manual Download)
-
-
-
-Download the following files and place them into the `models/` folder:
-
-
+All required model files are hosted in the **Releases** section of this repository:
 
 | Model File | Description | Download Link |
-
 | :--- | :--- | :--- |
+| `colorization_deploy_v2.prototxt` | Zhang Caffe Model Prototxt | [Download via Release](https://github.com/alivahab2025/AI-Photo-Colorizer-Pro/releases/download/v1.0.0/colorization_deploy_v2.prototxt) |
+| `pts_in_hull.npy` | Zhang Caffe Points | [Download via Release](https://github.com/alivahab2025/AI-Photo-Colorizer-Pro/releases/download/v1.0.0/pts_in_hull.npy) |
+| `colorization_release_v2.caffemodel` | Zhang Caffe Weights | [Download via Release](https://github.com/alivahab2025/AI-Photo-Colorizer-Pro/releases/download/v1.0.0/colorization_release_v2.caffemodel) |
+| `ColorizeArtistic_gen.pth` | DeOldify Artistic Weights | [Download via Release](https://github.com/alivahab2025/AI-Photo-Colorizer-Pro/releases/download/v1.0.0/ColorizeArtistic_gen.pth) |
+| `ColorizeStable_gen.pth` | DeOldify Stable Weights | [Download via Release](https://github.com/alivahab2025/AI-Photo-Colorizer-Pro/releases/download/v1.0.0/ColorizeStable_gen.pth) |
 
-| `colorization\_deploy\_v2.prototxt` | Zhang Caffe Prototxt | \[Download](https://fastly.jsdelivr.net/gh/richzhang/colorization@master/models/colorization\_deploy\_v2.prototxt) |
+---
 
-| `pts\_in\_hull.npy` | Zhang Caffe Points | \[Download](https://fastly.jsdelivr.net/gh/richzhang/colorization@master/resources/pts\_in\_hull.npy) |
-
-| `colorization\_release\_v2.caffemodel` | Zhang Caffe Weights | \[Download](https://huggingface.co/spaces/sczhou/CodeFormer/resolve/main/weights/caffe/colorization\_release\_v2.caffemodel) |
-
-| `ColorizeArtistic\_gen.pth` | DeOldify Artistic Model | \[Download](https://data.deepai.org/deoldify/ColorizeArtistic\_gen.pth) |
-
-| `ColorizeStable\_gen.pth` | DeOldify Stable Model | \[Download](https://data.deepai.org/deoldify/ColorizeStable\_gen.pth) |
-
-
-
-\---
-
-
-
-\## 📂 Project Directory Structure
-
-
+## 📂 Project Structure
 
 ```text
-
-AiColorizePhoto/
-
-├── models/                     <-- Place downloaded model weights here
-
-├── dummy/                      <-- Created automatically for DeOldify
-
-├── result\_images/              <-- Created automatically for output saves
-
-├── app.py                      <-- Main GUI Python code
-
-├── run\_app.bat                 <-- One-click Windows launcher
-
-├── requirements.txt            <-- Dependencies list
-
+AI-Photo-Colorizer-Pro/
+├── models/                     <-- Place downloaded model files here
+├── dummy/                      <-- Auto-created workspace folder
+├── result_images/              <-- Auto-created output folder
+├── app.py                      <-- Main CustomTkinter GUI code
+├── run_app.bat                 <-- One-click Windows launcher script
+├── requirements.txt            <-- Python dependencies list
 └── README.md                   <-- Project documentation
-
