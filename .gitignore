@@ -1,0 +1,20 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# AI Models (Large Weight Files)
+models/*.pth
+models/*.caffemodel
+models/*.npy
+
+# Output and Temp Folders
+result_images/*
+dummy/*
+build/
+dist/
+*.spec
+
+# Python Cache
+__pycache__/
+*.pyc
